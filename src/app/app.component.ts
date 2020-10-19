@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-primera-prueba';
-  miParrafo = 'mi parrafo';
+  dni = '63645454';
+
+  getDni() {
+    return 'Hola';
+  }
 }
