@@ -36,4 +36,9 @@
 <div [ngClass]="{border: dni.length >0, color: dni.length>8}">
   div del border
 </div>
+
+<ul>
+  <li *ngFor="let post of publications; let i= index">{{i}} : {{post.name}} : {{post.post}}</li>
+</ul>
+
 <!-- <app-footer></app-footer> -->

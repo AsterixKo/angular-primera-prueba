@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   dni: string;
   inputValueKeyUp: string = '';
+  publications = [{ name: 'Climate Change', post: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a pariatur reprehenderit commodi quae. Quod, nihil. Et tenetur exercitationem eos quisquam debitis, quibusdam soluta fuga quas officiis minima, saepe excepturi.' },
+  { name: 'Angular Directives', post: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo a pariatur reprehenderit commodi quae. Quod, nihil. Et tenetur exercitationem eos quisquam debitis, quibusdam soluta fuga quas officiis minima, saepe excepturi.' }]
 
-  constructor(){
-    this.dni='';
+  constructor() {
+    this.dni = '';
   }
   getDni() {
     return 'Hola';
@@ -26,7 +28,7 @@ export class AppComponent {
     alert(myEvento.target.value);
   }
   dynamicColor(): string {
-    let color:string = 'red';
+    let color: string = 'red';
     if (this.dni.length > 0) {
       color = 'green';
     }
