@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <!-- string interpolation -->
 <!-- <input type="text" placeholder="Introduce tu dni">
 
@@ -20,6 +20,10 @@
 <p>two way databinding</p>
 <input type="text" [(ngModel)]="dni" value="DNI introducido">
 <br>
-<p>El dni introducido es: {{dni}}</p>
+<!-- IF -->
+<p *ngIf="dni.length >0; else dniNoTieneValor">El dni tiene contenido: {{dni}}</p>
 
-<app-footer></app-footer>
+<ng-template #dniNoTieneValor>
+  <p>El DNI no tiene contenido</p>
+</ng-template>
+<!-- <app-footer></app-footer> -->

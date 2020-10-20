@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dni:string = 'Introduce tu dni';
+  dni:string;
   inputValueKeyUp:string ='';
 
   getDni() {
