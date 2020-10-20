@@ -6,9 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dni = '63645454';
+  dni:string = 'Introduce tu dni';
+  inputValueKeyUp:string ='';
 
   getDni() {
     return 'Hola';
+  }
+
+  sayGoodBye(){
+    alert('Goodbye!');
+  }
+
+  getKeyUp(myEvento:any){
+    console.log('Persionado en el input: ', myEvento.target.value);
+    console.log('Key: ', myEvento.key);
+    alert(myEvento.target.value);
   }
 }

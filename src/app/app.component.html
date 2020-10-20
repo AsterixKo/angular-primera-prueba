@@ -1,3 +1,4 @@
+<app-header></app-header>
 <!-- string interpolation -->
 <!-- <input type="text" placeholder="Introduce tu dni">
 
@@ -9,4 +10,16 @@
 <!-- property binding -->
 <input type="text" [value]="dni">
 
+<button (click)="sayGoodBye()">Click me!</button>
+<br>
+<br>
+<!-- mostramos el valor del input en un alert al pulsar una tecla dentro del input -->
+<input type="text" [value]="inputValueKeyUp" (keyup)="getKeyUp($event)">
+<br>
 
+<p>two way databinding</p>
+<input type="text" [(ngModel)]="dni" value="DNI introducido">
+<br>
+<p>El dni introducido es: {{dni}}</p>
+
+<app-footer></app-footer>
