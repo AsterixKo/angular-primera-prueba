@@ -21,9 +21,19 @@
 <input type="text" [(ngModel)]="dni" value="DNI introducido">
 <br>
 <!-- IF -->
-<p *ngIf="dni.length >0; else dniNoTieneValor" [ngStyle]="{backgroundColor: dynamicColor()}">El dni tiene contenido: {{dni}}</p>
+<p *ngIf="dni.length >0; else dniNoTieneValor" [ngStyle]="{backgroundColor: dynamicColor()}">
+  El dni tiene contenido: {{dni}}</p>
 
 <ng-template #dniNoTieneValor>
   <p [ngStyle]="{backgroundColor: dynamicColor()}">El DNI no tiene contenido</p>
 </ng-template>
+
+<!-- primero indicamos la clase css hide que esta declarada en app.component.css y luego la condición -->
+<div [ngClass]="{hide: dni.length >0, border: dni.length <0}">
+  ESTE MENSAJE ESTARA OCULTO SI TIENE ALGO DE TEXTO
+</div>
+
+<div [ngClass]="{border: dni.length >0, color: dni.length>8}">
+  div del border
+</div>
 <!-- <app-footer></app-footer> -->

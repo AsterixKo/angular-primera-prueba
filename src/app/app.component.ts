@@ -9,6 +9,9 @@ export class AppComponent {
   dni: string;
   inputValueKeyUp: string = '';
 
+  constructor(){
+    this.dni='';
+  }
   getDni() {
     return 'Hola';
   }

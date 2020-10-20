@@ -1,0 +1,11 @@
+.hide {
+  display: none;
+}
+
+.border {
+  border: 1px solid blue;
+  background-color: lightcoral;
+}
+.color{
+  color:white;
+}
