@@ -6,20 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  dni:string;
-  inputValueKeyUp:string ='';
+  dni: string;
+  inputValueKeyUp: string = '';
 
   getDni() {
     return 'Hola';
   }
 
-  sayGoodBye(){
+  sayGoodBye() {
     alert('Goodbye!');
   }
 
-  getKeyUp(myEvento:any){
+  getKeyUp(myEvento: any) {
     console.log('Persionado en el input: ', myEvento.target.value);
     console.log('Key: ', myEvento.key);
     alert(myEvento.target.value);
+  }
+  dynamicColor(): string {
+    let color:string = 'red';
+    if (this.dni.length > 0) {
+      color = 'green';
+    }
+    return color;
   }
 }

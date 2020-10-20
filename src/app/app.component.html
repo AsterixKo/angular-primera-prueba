@@ -21,9 +21,9 @@
 <input type="text" [(ngModel)]="dni" value="DNI introducido">
 <br>
 <!-- IF -->
-<p *ngIf="dni.length >0; else dniNoTieneValor">El dni tiene contenido: {{dni}}</p>
+<p *ngIf="dni.length >0; else dniNoTieneValor" [ngStyle]="{backgroundColor: dynamicColor()}">El dni tiene contenido: {{dni}}</p>
 
 <ng-template #dniNoTieneValor>
-  <p>El DNI no tiene contenido</p>
+  <p [ngStyle]="{backgroundColor: dynamicColor()}">El DNI no tiene contenido</p>
 </ng-template>
 <!-- <app-footer></app-footer> -->
